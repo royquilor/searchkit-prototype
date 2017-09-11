@@ -11,23 +11,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://unpkg.com/tachyons@4.8.0/css/tachyons.min.css"/>
   </head>
+  <style>
+    header {
+      height: 110px;
+    }
+    section {
+      margin-top: 70px;
+    }
+
+    @media screen and (min-width: 60em) {
+      header {
+        height: 60px;
+      }
+      section {
+        margin-top: 60px;
+      }
+      article {
+        /*max-width:1300px;
+        margin:0 auto;*/
+        margin-left: 16rem;
+      }
+    }
+
+    .input-search {
+      border: 1px solid transparent;
+      height:40px;
+      padding-left:45px;
+      padding-right:45px;
+      outline: none;
+    transition: all .2s ease-in-out;
+    border-radius: 20px;
+    }
+
+    .input-search:focus {
+      border-color: blue;
+    }
+
+  </style>
   <body class="sans-serif h-100">
 
-    <header class="bb bg-white b--black-10 fixed flex items-center w-100 pv2 top-0 z-1">
-      <div class="dib w5-l pa3">
-        <a class="link" href="#">logo</a>
+    <header class="bb bg-white b--black-10 fixed flex-l items-center w-100 top-0 z-1">
+      <div class="w5-l flex items-center">
+        <div class="xdib-ns pa3 xbg-gray absolute relative-l">
+          <a href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+          </a>
+        </div>
+        <div class="xdib-ns pa3 xbg-red flex-auto tc tl-l ">
+          <a class="link" href="#">logo</a>
+        </div>
       </div>
-
       <form class="black-80 flex-auto ph3">
-        <div class="">
-          <input class="input-reset ba b--white xb--black-50 pa2 db w-100 bg-black-05 br-pill" type="text" aria-describedby="name-desc">
+        <div class="relative">
+          <button class="absolute left-0 bn bg-transparent pa1 pt2 ph3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="10.5" cy="10.5" r="7.5"></circle><line x1="21" y1="21" x2="15.8" y2="15.8"></line></svg>
+          </button>
+          <input class="input-reset input-search pa2 db w-100 bg-black-05" type="text" aria-describedby="name-desc">
         </div>
       </form>
     </header>
 
-    <section class="mt5">
+    <section class="pt4 pt0-l ">
     <aside class="bg-black-05 h-100 w5 fixed dn db-l">
-      <form class="pa3 pt4">
+      <form class="pa3 pt4 f6">
         <fieldset id="favorite_movies" class="bn pa0">
           <legend class="fw7 mb2">Favorite Movies</legend>
           <div class="flex items-center mb2">
@@ -60,10 +106,55 @@
           </div>
         </fieldset>
       </form>
+      <form class="pa3 f6">
+        <fieldset id="favorite_movies" class="bn pa0">
+          <legend class="fw7 mb2">Writers</legend>
+          <div class="flex items-center mb2">
+            <input class="mr2" type="checkbox" id="spacejam" value="spacejam">
+            <label for="spacejam" class="lh-copy">Space Jam</label>
+          </div>
+          <div class="flex items-center mb2">
+            <input class="mr2" type="checkbox" id="airbud" value="airbud">
+            <label for="airbud" class="lh-copy">Air Bud</label>
+          </div>
+          <div class="flex items-center mb2">
+            <input class="mr2" type="checkbox" id="hocuspocus" value="hocuspocus">
+            <label for="hocuspocus" class="lh-copy">Hocus Pocus</label>
+          </div>
+          <div class="flex items-center mb2">
+            <input class="mr2" type="checkbox" id="diehard" value="diehard">
+            <label for="diehard" class="lh-copy">Die Hard</label>
+          </div>
+          <div class="flex items-center mb2">
+            <input class="mr2" type="checkbox" id="primer" value="primer">
+            <label for="primer" class="lh-copy">Primer</label>
+          </div>
+          <div class="flex items-center mb2">
+            <input class="mr2" type="checkbox" id="proxy" value="proxy">
+            <label for="proxy" class="lh-copy">Hudsucker Proxy</label>
+          </div>
+          <div class="flex items-center mb2">
+            <input class="mr2" type="checkbox" id="homealone" value="homealone">
+            <label for="homealone" class="lh-copy">Home Alone</label>
+          </div>
+        </fieldset>
+      </form>
     </aside>
 
-  <article class="ml7-l">
-  <h2 class="f3 fw4 pa3 pt4 mv0">10 results</h2>
+  <article>
+  <div class="flex pa3 pt4 items-center justify-between ">
+    <div>
+      <h2 class="f3 fw4 mv0">10 results</h2>
+    </div>
+    <div class="">
+      <a href="#" class="link pa2">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-list"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3" y2="6"></line><line x1="3" y1="12" x2="3" y2="12"></line><line x1="3" y1="18" x2="3" y2="18"></line></svg>
+      </a>
+      <a href="#" class="link pa2">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-grid"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+      </a>
+    </div>
+  </div>
   <div class="cf pa2">
     <div class="fl w5 pa2">
       <a href="https://geo.itunes.apple.com/us/album/blonde/id1146195596?at=1l3vqFJ&mt=1&app=music" class="db link dim tc">
