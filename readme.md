@@ -11,6 +11,7 @@ http://quilor.com/searchkit-prototype/index.html
 ## Side menu
 
 * https://www.w3schools.com/howto/howto_js_sidenav.asp
+* https://codepen.io/nwest88/pen/PwwZpv
 
 ```html
 browser-sync start --server --files "index.html"
