@@ -9,7 +9,10 @@ Push menu:
 Filters icon interaction:
 * http://quilor.com/searchkit-prototype/v3.html
 
-## Mobile iterations
+List filters overflow:
+* http://quilor.com/searchkit-prototype/list-overflow.html
+
+## Mobile iterations (test on desktop browser)
 
 * http://quilor.com/searchkit-prototype/filter-full.html
 * http://quilor.com/searchkit-prototype/mobile-overlay.html
